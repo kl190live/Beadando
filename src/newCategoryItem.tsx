@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Design.css'
 
 interface ItemInterface {
     item: string;
@@ -21,11 +22,11 @@ function NewCategoryItem(props: ItemInterface) {
         <li>
             {props.item}
             {onToggle ? (
-                <button className="confirmation" onClick={() => setOnToggle(!onToggle)}>
+                <button className="gombok" onClick={() => setOnToggle(!onToggle)}>
                     Torles
                 </button>
             ) : (
-                <div className="confirmation">
+                <div className="gombok">
                     <button onClick={() => { cancelRemove(); props.onRemove() }}>Igen</button>
                     <button onClick={cancelRemove}>Nem</button>
                 </div>
